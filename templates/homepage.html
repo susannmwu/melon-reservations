@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock%}
+
+{% block body %}
+
+
+    <form action="/users" method="POST">
+        <h2>Are you new around here? Create a new account</h2>
+        <label>Username</label>
+        <input name="username" type="text">
+        <button type="submit" class="">Submit</button>
+    </form>
+
+    <form action="/login" method="POST">
+        <h2>Log in</h2>
+        <label>Username</label>
+        <input name="username" type="text">
+        <button type="submit" class="">Submit</button>
+    </form>
+
+{% endblock %}

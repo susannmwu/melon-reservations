@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %} {{ user.username}}'s Reservations {% endblock%}
+
+{% block body %}
+
+<hi>{{ user.username}}'s Reservations</hi>
+
+
+    {% for res in user.reservations %}
+    <li>
+        {{ res.date }} at {{ res.time }}
+    </li>
+
+    {% endfor %}
+
+
+{% endblock %}

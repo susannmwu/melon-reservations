@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Melons Reservations{% endblock%}
+
+{% block body %}
+<hi>Reservations</hi>
+
+{% if session.get("username") %}
+    <p>Select a time for your melon tasting</p>
+        <form action="/schedule-tasting" method="POST">
+        <select name="time">
+            {% for time in times %}
+            <option value= {{ time }}>{{ time }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="day">
+            {% for day in day_list %}
+            <option value= {{ day}}>{{ day }}</option>
+            {% endfor %}
+        </select>
+{% endif %}        
+            <button type="submit" class="">Submit</button>
+            {% endblock %}
+        </form>
